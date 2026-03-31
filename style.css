@@ -50,6 +50,7 @@ section {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .btn-github {
