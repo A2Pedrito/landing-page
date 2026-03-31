@@ -1,3 +1,4 @@
+/* === 1. Estilos Globales === */
 body {
     font-family: sans-serif;
     margin: 10px;
@@ -5,20 +6,32 @@ body {
     background-color: whitesmoke;
 }
 
-header {
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* === 2. Layout Principal === */
+header, footer {
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     background-color: antiquewhite;
 }
 
 main {
     padding: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: antiquewhite;
 }
 
 section {
@@ -29,18 +42,57 @@ section {
     border-radius: 15px;
 }
 
-a {
+/* === 3. Componentes y Clases === */
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-github {
+    display: inline-flex;
+    background-color: #24292e;
+    align-items: center;      
+    justify-content: center;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 20px;
     text-decoration: none;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
+
 }
 
-a:hover {
+.btn-github:hover {
+    background-color: #444d56;
+    text-decoration: none;
+    color: white;
     text-decoration: underline;
-    color: #5865F2;
 }
 
-@media(max-width:650px) {
+.btn-discord {
+    display: inline-flex;
+    background-color: #5865F2;
+    align-items: center;      
+    justify-content: center;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
+.btn-discord:hover {
+    background-color: #7580f0; 
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+/* === 4. Responsive Design (Media Queries) === */
+@media(max-width:650px) {
     body {
         font-size: 14px;
     }
@@ -48,15 +100,16 @@ a:hover {
     section {
         margin: 10px;
     }
-
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
 }
 
-img {
-    display: block;
-    margin: auto;
-    width: 200px;
-    height: auto;
-}
-.subrayado{
-    text-decoration: underline;
+header h2{
+    font-size: 1.2rem;  
+    color: #555;        
+    margin-top: 5px; 
+    font-weight: normal;
 }
